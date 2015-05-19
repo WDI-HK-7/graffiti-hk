@@ -24,8 +24,20 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    
+    @post = Post.find_by_id(params[:id])
+    if @post.nil?
+      render :json => {
+        message: "Cannot find post with id=#{params[:id]}"
+      }
+    else
+      if @post.destroy
+        render :json => { message: "deleted"}
+      else 
+        render :json => { message: "not deleted"}
+      end
+    end
   end
+
   def update
     
   end
