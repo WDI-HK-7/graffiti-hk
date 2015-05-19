@@ -53,9 +53,6 @@ class PostsController < ApplicationController
     end
   end
 
-    
-  
-
   def post_params
     params.require(:post).permit(:artist, :caption, :address, :picture)
   end
