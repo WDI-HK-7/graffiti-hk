@@ -32,7 +32,7 @@ gem 'devise'
 #bower
 gem 'bower'
 #paperclip for blob
-gem 'paperclip'
+gem 'paperclip' 
 #bower heroku
 gem 'rails_12factor', group: :production
 
