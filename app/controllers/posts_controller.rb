@@ -14,7 +14,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    
+    @post = Post.find_by_id(params[:id])
+
+    if @post.nil?
+      render :json => {
+        message: "Cannot find post with id=#{params[:id]}"
+      }
+    end
   end
 
   def destroy
@@ -25,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :content, :category, :picture)
+    params.require(:post).permit(:artist, :caption, :address, :picture)
   end
 
 end
