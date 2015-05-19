@@ -39,8 +39,22 @@ class PostsController < ApplicationController
   end
 
   def update
-    
+    @post = Post.find_by_id(params[:id])
+     if @post.nil?
+      render :json => {
+        message: "Cannot find post with id=#{params[:id]}"
+      }
+    else
+      if @post.update(post_params)
+        render :json => { message: "updated"}
+      else 
+        render :json => { message: "not updated"}
+      end
+    end
   end
+
+    
+  
 
   def post_params
     params.require(:post).permit(:artist, :caption, :address, :picture)
