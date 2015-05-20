@@ -1,0 +1,17 @@
+app.controller('LikesNewCtrl', ['$scope', '$http', function($scope, $http){
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  $scope.like = {};
+  $scope.form = {};
+
+  $scope.form.create = function(){
+    var data = {
+      like: $scope.like
+    };
+
+    $http.like(url + '/likes', data).success(function(response){
+      console.log(response);
+    });
+  };
+}]);
