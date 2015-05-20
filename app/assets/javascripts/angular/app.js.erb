@@ -25,6 +25,10 @@ app.config(['$routeProvider',function($routeProvider) {
     when('/new_posts', {
       templateUrl: "<%= asset_path('posts/new.html') %>",
       controller: 'PostsNewCtrl'
+    }).
+    when('/likes', {
+      templateUrl: "<%= asset_path('likes/index.html') %>",
+      controller: 'LikesIndexCtrl'
     })
 
     // .

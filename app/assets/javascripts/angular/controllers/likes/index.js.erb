@@ -1,0 +1,9 @@
+app.controller('LikesIndexCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  $http.get(url + '/likes').success(function(response){
+    console.log(response);
+    $scope.likes = response;
+  });
+}]);
