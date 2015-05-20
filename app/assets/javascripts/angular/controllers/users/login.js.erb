@@ -1,0 +1,26 @@
+app.controller('LoginCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+	$scope.form = {};
+	$scope.user = {};
+
+	var url = "<%= ENV['URL'] %>" ||"http://localhost:3000/";
+
+	$scope.form.submit = function(){
+		console.log($scope.user);
+
+		var data = {
+			user: $scope.user 
+		};
+
+		$http.post(url + "users/sign_in", data).success(function(response){
+			console.log(response);
+		});
+	};
+
+	$scope.form.logout = function(){
+		$http.delete(url + 'users/sign_out').success(
+			function(response){
+				console.log(response);
+
+		});
+	}
+}]);

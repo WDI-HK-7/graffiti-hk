@@ -10,6 +10,10 @@ app.config(['$routeProvider',function($routeProvider) {
       templateUrl: "<%= asset_path('static_pages/index.html') %>",
       controller: 'StaticPagesCtrl'
     }).
+      when('/signup', {
+      templateUrl: "<%= asset_path('users/signup.html') %>",
+      controller:'SignUpCtrl'
+    }).
     when('/login', {
       templateUrl: "<%= asset_path('users/login.html') %>",
       controller: 'LoginCtrl'
