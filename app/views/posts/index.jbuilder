@@ -5,10 +5,10 @@ json.array! @posts do |post|
   json.address @post.address 
   json.picture post.picture
   
-<!--   json.comments post.comments do |comment|
+  json.comments post.comments do |comment|
     json.content comment.content
     json.created_at comment.created_at
     json.user_id comment.user_id
-  end -->
+  end
 end 
 
