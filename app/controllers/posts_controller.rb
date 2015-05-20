@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @posts = Post.order(:created_at)
     render :json => @posts
@@ -45,16 +46,15 @@ class PostsController < ApplicationController
         message: "Cannot find post with id=#{params[:id]}"
       }
     else
-      if @post.update(post_params)
-        render :json => { message: "updated"}
-      else 
-        render :json => { message: "not updated"}
+      if current_user == @post.user
+        if @post.update(post_params)
+          render :json => { message: "updated"}
+        else 
+          render :json => { message: "not updated"}
+        end
       end
     end
   end
-
-    
-  
 
   def post_params
     params.require(:post).permit(:artist, :caption, :address, :picture)
