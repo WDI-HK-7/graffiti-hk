@@ -16,7 +16,7 @@ class LikesController < ApplicationController
 
   def update 
     @like = Like.find_by_id(params[:id])
-    if @like .nil? 
+    if @like.nil? 
       render :json => {
         message: "Cannot find like with id #{params[:id]}"
       }
@@ -33,7 +33,7 @@ class LikesController < ApplicationController
 
   def destroy
     @like = Like.find_by_id(params[:id])
-    if @like .nil? 
+    if @like.nil? 
       render :json => {
         message: "Cannot find like with id #{params[:id]}"
       }
