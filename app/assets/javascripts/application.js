@@ -17,4 +17,7 @@
 //= require angular-route/angular-route
 //= require ng-file-upload/ng-file-upload
 //= require ng-file-upload/ng-file-upload-shim
+//= require angular-masonry/angular-masonry
+//= require imagesloaded/imagesloaded.pkgd.min
+//= require masonry/dist/masonry.pkgd.min
 //= require_tree .
