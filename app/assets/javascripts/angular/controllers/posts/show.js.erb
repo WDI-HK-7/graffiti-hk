@@ -1,8 +1,28 @@
 app.controller('PostsShowCtrl', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
 
+  $scope.form = {};
+  $scope.post = {};
+  
   var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
 
   $http.get(url + '/posts/' + $routeParams.id).success(function(response){
     $scope.post = response;
+    $scope.post.comments = response.comments;
   });
+
+  $scope.form.create = function(){
+    var data = {
+      comment: {
+        content: $scope.comment.content,
+        post_id: $scope.comment.post_id
+      }
+    };
+
+    $http.post(url + 'posts/' + $routeParams.id + '/comments', data).success(function(response){
+      console.log(response.message.comment);
+      $scope.post.comments.push(response.message.comment);
+      $scope.comment.content = "";
+    });
+  };
+  
 }]);

@@ -14,12 +14,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by_id(params[:id])
+    @post = Post.includes(:comments).find(params[:id])
 
     if @post.nil?
-      render :json => {
-        message: "Cannot find post with id=#{params[:id]}"
-      }
+      render :json => {message: "Cannot find post with id=#{params[:id]}"}
     end
   end
 
