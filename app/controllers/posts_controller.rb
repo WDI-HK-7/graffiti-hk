@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   def index
     @posts = Post.order(:created_at)
-    render :json => @posts
   end
 
   def create

@@ -2,7 +2,7 @@ app.controller('GalleryCtrl', ['$scope', '$http', '$location', function($scope, 
 
   var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
 
-  $http.get(url + '/posts').success(function(response){
+  $http.get(url + 'posts').success(function(response){
     console.log(response);
     $scope.posts = response;
   });
