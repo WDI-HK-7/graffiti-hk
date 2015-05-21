@@ -8,15 +8,16 @@ app.controller('PostsNewCtrl', ['$scope', '$http', '$location', 'Upload', functi
   
   $scope.form.create = function(){
     var data = {
-      'post[artist]': $scope.post.artist,
+      'post[artist]' : $scope.post.artist,
       'post[caption]': $scope.post.caption,
-      'post[address]': $scope.post.address,
+      'post[address]': $scope.post.address
     };
+   
 
     Upload.upload({
       url: url + 'posts',
       method:'POST',
-      fields: {},
+      fields: data,
       file: $scope.picture.files[0],
       fileFormDataName: 'post[picture]',
     }).success(function(response){
