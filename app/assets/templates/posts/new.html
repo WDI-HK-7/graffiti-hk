@@ -1,26 +1,66 @@
-<div class="container">
-  <div class="row">
-    <h1>Create A New Post</h1>
-
-    <form ng-submit="form.create()">
-      <div class="form-group">
-        <label>Artist</label>
-        <input type="text" class="form-control" placeholder="Enter title" ng-model="post.title">
+<div class="container col-xs-12">
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Living Walls</a>
       </div>
-      <div class="form-group">
-        <label>Caption</label>
-        <input type="text" class="form-control" placeholder="Enter content" ng-model="post.content">
+      <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">MyFavourites</a></li>
+          <li><a href="#contact">MyUploads</a></li>
+          <li class="active"><a href="#contact">AddGraff</a></li>
+        </ul>
       </div>
-      <div class="form-group">
-        <label>Address</label>
-        <input type="text" class="form-control" placeholder="Enter category" ng-model="post.category">
-      </div>
+    </div>
+  </div>
 
-
+  <div class="row" id ="newGraf">
+    <h1 class="graffiti">New Graffiti</h1>
+    <br>
+    <div class="col-xs-5">
+      <img src="http://placehold.it/28x28" srcset="http://placehold.it/28x28 28w" sizes="28vw" alt="Placeholder"/>      
       <button class="btn btn-default" ngf-select ng-model="picture.files">Upload</button>
-      
-
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+    </div>
+    <div class="col-xs-7"> 
+      <form ng-submit="form.create()">
+        <div class="form-group">
+          <label>Artist</label>
+          <input type="text" class="form-control" placeholder="Enter title" ng-model="post.artist">
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" class="form-control" placeholder="Enter content" ng-model="post.address">
+        </div>
+        <div class="form-group">
+          <label>Caption</label>
+          <input type="text" class="form-control" placeholder="Enter category" ng-model="post.caption">
+        </div>
+        <button type="submit" class="btn btn-default pull-right">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-inline">
+      <ul class="list-inline">
+        <li><p class="navbar-text" id="creators">Created by Elia and Yang</p></li>
+        <li class="pull-right"><a href ="www.plus.google.com"><img class="icons lastIcon" src="http://bit.ly/1LeuNPb"></a></li>
+        <li class="pull-right"><a href ="www.twitter.com"><img class="icons" src="http://bit.ly/1PY79YG"></a></li>
+        <li class="pull-right"><a href ="www.instagram.com"><img class="icons" src="http://bit.ly/1JCqjDY"></a></li>
+        <li class="pull-right" style="padding-left: 0px"><a href ="www.facebook.com"><img class="icons" src="http://simpleicon.com/wp-content/uploads/facebook-2.png"></a></li>
+        <li class="pull-right hidden-xs" id="follow-us"><p class="navbar-text">Follow us: </p></li>
+      </ul>
+    </div>
   </div>
 </div>
+
+<script type="text/javascript" ></script>
