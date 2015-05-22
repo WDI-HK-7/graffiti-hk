@@ -1,6 +1,31 @@
 .signup-text {
-  font-family: Impact;
+  font-family: monospace !important;
   font-size: 40px;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+.signup-container {
+  background: url("http://hdwallsource.com/img/2014/1/cool-street-art-wallpaper-37602-38465-hd-wallpapers.jpg") no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.95;
+}
+
+a {
+   font-family: monospace;
+   color: black !important;
+}
+
+#login-link, {
+  font-family: monospace !important;
+}
+
+#submitBtn {
+  background-color: rgba(215, 123, 101, 0.9);
+  background: rgba(215, 123, 101, 0.9);
+  color:white;
+}
+
+.login-label {
+  font-family: monospace !important;
 }

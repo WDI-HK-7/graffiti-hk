@@ -1,6 +1,6 @@
-<div class="container col-xs-12">
+<div class="container signup-container col-xs-12">
   <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -20,7 +20,7 @@
           <li><a href="#/login">AddGraff</a></li>
         </ul>
         <div class="navbar-text">
-          <a href="http://localhost:3000/#/login" class="glyphicon glyphicon-log-in" aria-hidden = "true"></a>
+          <a href="http://localhost:3000/#/login"><span class="glyphicon glyphicon-log-in" aria-hidden = "true"></span></a>
         </div>
       </div>
     </div>
@@ -39,16 +39,16 @@
           <input type="password" class="form-control" placeholder="password" ng-model="user.password">
         </div>
         <div class="form-group">
-          <label class="login-label">Password</label>
+          <label class="login-label">Confirm Password</label>
           <input type="password" class="form-control" placeholder="password confirmation" ng-model="user.password_confirmation">
         </div>
-        <input type="submit" class="block-center btn btn-default"> 
+        <input type="submit" class="block-center btn btn-default" id="submitBtn"> 
       </form>
-      <p class="signup">Returning user? Login <a href="#/login">here</a></p>
+      <p class="signup">Returning user? <strong>Login</strong> <a href="#/login">here</a></p>
       </div>
   </div>
     <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-bottom">
+  <div class="navbar navbar-fixed-bottom">
     <div class="container-inline">
       <ul class="list-inline">
         <li><p class="navbar-text" id="creators">Created by Elia and Yang</p></li>
