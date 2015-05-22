@@ -13,14 +13,14 @@
       </div>
       <div class=" pull-right collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#contact">MyFavourites</a></li>
-          <li><a href="#contact">MyUploads</a></li>
-          <li><a href="#contact">AddGraff</a></li>
+          <li class="active"><a href="#/gallery">Home</a></li>
+          <li><a href="#/contact">Contact</a></li>
+          <li><a href="#/my_fav">MyFavourites</a></li>
+          <li><a href="#/my_uploads">MyUploads</a></li>
+          <li><a href="#/new_post">AddGraff</a></li>
         </ul>
         <div class="navbar-text">
-          <a href="http://localhost:3000/#/login" ng-click="form.logout()" class="glyphicon glyphicon-log-out" aria-hidden = "true"></a>
+          <button ng-click="form.logout()" ng-controller="LoginCtrl" class="btn btn-default glyphicon glyphicon-log-out" aria-hidden = "true"></button>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
 
 <!-- Begin page content -->
     <div class="row">
-      <div class="gallery col-xs-12">
+      <div class="gallery col-xs-12" masonry>
         <h1>Gallery</h1>
         <div id="galleryPics">
           <div class="col-xs-6 col-sm-3 masonry-brick" ng-repeat="post in posts track by $index" >
