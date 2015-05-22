@@ -10,6 +10,7 @@ gem 'pg'
 gem 'devise'
 gem 'bower'
 gem 'paperclip' 
+gem 'underscore-rails'
 gem 'rails_12factor', group: :production
 
 group :development, :test do

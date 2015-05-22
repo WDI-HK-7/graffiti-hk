@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require underscore/underscore
+//= require underscore
 //= require angular/angular
 //= require angular-route/angular-route
 //= require ng-file-upload/ng-file-upload
