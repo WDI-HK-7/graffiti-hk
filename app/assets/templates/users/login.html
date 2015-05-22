@@ -26,24 +26,25 @@
     </div>
   </div>
 
-  <div class="row">
-    <h1 class="login-text">Login</h1>
+	<div class="row">
+		<h1 class="login-text">Login</h1>
     <div class="login col-xs-12">
-      <form class="center_div " ng-submit="form.submit()">
+  		<form class="center_div " ng-submit="form.submit()">
         <div class="form-group">
           <label class="login-label">Email</label>
-          <input type="email" class="form-control" placeholder="email" ng-model="user.email"> 
+  			  <input type="email" class="form-control" placeholder="email" ng-model="user.email"> 
         </div>
         <div class="form-group">
-          <label class="login-label">Password</label>
+  			  <label class="login-label">Password</label>
           <input type="password" class="form-control" placeholder="password" ng-model="user.password">
         </div>
-        <input type="submit" class="block-center btn btn-default">
-      </form>
+  			<input type="submit" class="block-center btn btn-default">
+  		</form>
       <button ng-click="form.logout()">Log out</button>
       </div>
-  </div>
-
+	</div>
+  
+    <!-- Fixed navbar -->
   <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-inline">
       <ul class="list-inline">
