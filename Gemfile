@@ -18,4 +18,3 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
 end
-
