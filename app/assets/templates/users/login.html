@@ -13,11 +13,11 @@
       </div>
       <div class="pull-right collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
+          <li><a href="#/gallery">Home</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#contact">MyFavourites</a></li>
-          <li><a href="#contact">MyUploads</a></li>
-          <li><a href="#contact">AddGraff</a></li>
+          <li><a href="#/login">MyFavourites</a></li>
+          <li><a href="#/login">MyUploads</a></li>
+          <li><a href="#/login">AddGraff</a></li>
         </ul>
         <div class="navbar-text">
           <a href="http://localhost:3000/#/login" class="glyphicon glyphicon-log-in" aria-hidden = "true"></a>
@@ -38,13 +38,13 @@
   			  <label class="login-label">Password</label>
           <input type="password" class="form-control" placeholder="password" ng-model="user.password">
         </div>
-  			<input type="submit" class="block-center btn btn-default">
+  			<input type="submit" class="block-center btn btn-default"> 
   		</form>
-      <button ng-click="form.logout()">Log out</button>
+      <p class="signup">New user? Sign up <a href="#/signup">here</a></p>
       </div>
 	</div>
-  
-    <!-- Fixed navbar -->
+
+  <!-- Fixed navbar -->
   <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-inline">
       <ul class="list-inline">

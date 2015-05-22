@@ -13,14 +13,15 @@ app.controller('LoginCtrl', ['$scope', '$http', '$location', function($scope, $h
 
 		$http.post(url + "users/sign_in", data).success(function(response){
 			console.log(response);
+			$location.path('/gallery');
 		});
 	};
 
 	$scope.form.logout = function(){
-		$http.delete(url + 'users/sign_out').success(
-			function(response){
-				console.log(response);
-
+		$http.delete(url + 'users/sign_out').success(function(response){
+			console.log(response);
+			$location.path('/login');
 		});
 	}
+
 }]);
