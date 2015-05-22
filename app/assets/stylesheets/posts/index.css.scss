@@ -1,20 +1,24 @@
 
 .gallery {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   width: 100px; 
   background: url("http://hdwallsource.com/img/2014/1/cool-street-art-wallpaper-37602-38465-hd-wallpapers.jpg") no-repeat center center fixed;
   background-size: cover;
   opacity: 0.95;
   position: fixed;
-  
+  height: 1100px;
 };
 
+.image-preview {
+  max-width: 200px;
+}
 
 h1 {
   text-align: center;
   font-family: monospace !important;
   text-shadow:5px 2px 6px #f2e6f2;
+  color:black !important;
 
 };
 
@@ -38,7 +42,7 @@ img {
 
 a {
   color: white !important;
-  text-shadow:5px 5px 5px #000000 !important;
+  // text-shadow:5px 5px 5px #000000 !important;
   font-weight: bold;
 }
 
@@ -59,12 +63,20 @@ a {
   font-family: monospace !important;
   color: black !important;
   text-shadow:5px 2px 6px #f2e6f2;
-  background-color: white;
+  // background-color: white;
 }
 
 .icons {
   background-color: white;
+  font-family: monospace !important;
+  color: white; 
 }
 .navbar-text {
-  background-color: white;
+  // background-color: white;
+  font-family: monospace !important;
+  color: white; 
+}
+
+div.row{
+  padding-top: 0px;
 }

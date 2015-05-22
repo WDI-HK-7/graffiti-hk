@@ -1,4 +1,4 @@
-<div class="container col-xs-12">
+<div class="container container-new col-xs-12">
   <!-- Fixed navbar -->
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -30,24 +30,25 @@
     <h1 class="graffiti">New Graffiti</h1>
     <br>
     <div class="col-xs-5">
-      <img src="http://placehold.it/28x28" srcset="http://placehold.it/28x28 28w" sizes="28vw" alt="Placeholder"/>      
-      <button class="btn btn-default" ngf-select ng-model="picture.files">Upload</button>
+      <!-- src="http://placehold.it/28x28"  -->
+      <img ngf-src="picture.files[0]" class="img-responsive image-preview" alt="Placeholder"> 
+      <button class="btn btn-default graf-labels" ngf-select ng-model="picture.files">Upload</button>
     </div>
     <div class="col-xs-7"> 
       <form ng-submit="form.create()">
         <div class="form-group">
-          <label>Artist</label>
+          <label class="graf-labels">Artist</label>
           <input type="text" class="form-control" placeholder="Enter title" ng-model="post.artist">
         </div>
         <div class="form-group">
-          <label>Address</label>
+          <label class="graf-labels">Address</label>
           <input type="text" class="form-control" placeholder="Enter content" ng-model="post.address">
         </div>
         <div class="form-group">
-          <label>Caption</label>
+          <label class="graf-labels">Caption</label>
           <input type="text" class="form-control" placeholder="Enter category" ng-model="post.caption">
         </div>
-        <button type="submit" class="btn btn-default pull-right">Submit</button>
+        <button type="submit" class="btn btn-default pull-right graf-labels">Submit</button>
       </form>
     </div>
   </div>
