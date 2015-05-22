@@ -13,6 +13,7 @@ app.controller('SignUpCtrl', ['$scope', '$http', '$location', function($scope, $
 
 		$http.post(url + "users", data).success(function(response){
 			console.log(response);
+			$location.path("/gallery")
 		});
 	};
 }]);
