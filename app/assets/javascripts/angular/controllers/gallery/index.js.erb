@@ -6,4 +6,9 @@ app.controller('GalleryCtrl', ['$scope', '$http', '$location', function($scope, 
     console.log(response);
     $scope.posts = response;
   });
+
+  $scope.picInfo = function(id){
+    console.log('working');
+    $location.path('/posts/' + id);
+  }
 }]);
