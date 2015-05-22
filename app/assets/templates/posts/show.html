@@ -1,40 +1,67 @@
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Living Walls</a>
+<!-- <div class="container-fluid col-xs-12"> -->
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" id="header">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/#/gallery">Living Walls</a>
+      </div>
+      <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/#/gallery">Home</a></li>
+          <li><a href="#my_fav">MyFavourites</a></li>
+          <li><a href="#my_uploads">MyUploads</a></li>
+          <li><a href="#/new_posts">AddGraff</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#contact">MyFavourites</a></li>
-        <li><a href="#contact">MyUploads</a></li>
-        <li><a href="#contact">AddGraff</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12" id="singlePicInfo">
-      <img ng-src="{{ post.picture }}" class="img-responsive">
-      <h4>Artist:  {{ post.artist  }}</h4>
-      <h4>Caption: {{ post.caption }}</h4>
-      <h4>Address: {{ post.address }}</h4>
+<!-- Begin page content -->
+  <div class ="content col-xs-12">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12" id="singlePicInfo">
+          <img ng-src="{{ post.picture }}" class="img-responsive">
+          <h4>Artist:  {{ post.artist  }}</h4>
+          <h4>Caption: {{ post.caption }}</h4>
+          <h4>Address: {{ post.address }}</h4>
 
-      <h4>Comments: </h4>
-      <ul>
-        <li ng-repeat="comment in post.comments"> {{comment.content}}</li>
-      </li>
-      
+          <h4><strong>Comments</strong></h4>
+          <ul>
+            <li ng-repeat="comment in post.comments"> {{comment.content}}</li>
+          </li>
+          
 
-      <form ng-submit="form.create()">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" placeholder="What do you think?" ng-model="comment.content"></textarea>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <form ng-submit="form.create()">
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="What do you think?" ng-model="comment.content"></textarea>
+              <button type="submit" class="btn btn-default" id="submit">Submit</button>
+            </div>
+          </form>
         </div>
-    </form>
+      </div>
     </div>
   </div>
-</div>
+
+ <div class="navbar navbar-default navbar-fixed-bottom" id="footer">
+    <div class="container-inline">
+      <ul class="list-inline">
+        <li><p class="navbar-text" id="creators">Created by Elia and Yang</p></li>
+        <li class="pull-right"><a href ="www.plus.google.com"><img class="icons lastIcon" src="http://bit.ly/1LeuNPb"></a></li>
+        <li class="pull-right"><a href ="www.twitter.com"><img class="icons" src="http://bit.ly/1PY79YG"></a></li>
+        <li class="pull-right"><a href ="www.instagram.com"><img class="icons" src="http://bit.ly/1JCqjDY"></a></li>
+        <li class="pull-right" style="padding-left: 0px"><a href ="www.facebook.com"><img class="icons" src="http://simpleicon.com/wp-content/uploads/facebook-2.png"></a></li>
+        <li class="pull-right hidden-xs" id="follow-us"><p class="navbar-text">Follow us: </p></li>
+      </ul>
+    </div>
+  </div>
+<!-- </div> -->
+
+
+
