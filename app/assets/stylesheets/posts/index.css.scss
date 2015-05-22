@@ -1,13 +1,70 @@
 
 .gallery {
   margin-top: 50px;
-  width: 100px 
-}
+  margin-bottom: 50px;
+  width: 100px; 
+  background: url("http://hdwallsource.com/img/2014/1/cool-street-art-wallpaper-37602-38465-hd-wallpapers.jpg") no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.95;
+  position: fixed;
+  
+};
+
 
 h1 {
   text-align: center;
-}
+  font-family: monospace !important;
+  text-shadow:5px 2px 6px #f2e6f2;
+
+};
 
 img {
-  padding-bottom: 20px;
+  padding-bottom: 0px !important;
+  margin-bottom: 20px;
+  -moz-box-shadow: 0px 2px 27px #000000;
+  -webkit-box-shadow: 0px 2px 27px #000000;
+  box-shadow: 0px 2px 27px #000000;
+  margin-top: 20px;
+}
+
+#header {
+  background: url("http://hdwallsource.com/img/2014/3/graffiti-backgrounds-18389-18854-hd-wallpapers.jpg") no-repeat center center fixed;
+  border-color: transparent;
+  font-family: monospace !important;
+  color: white;
+
+  
+}
+
+a {
+  color: white !important;
+  text-shadow:5px 5px 5px #000000 !important;
+  font-weight: bold;
+}
+
+.row{
+  overflow: scroll;
+}
+
+#footer {
+  background-color: rgba(110, 145, 174, 0.9);
+  background: rgba(110, 145, 174, 0.9);
+  color: rgba(110, 145, 174, 0.9);
+  border-color: transparent;
+  font-family: monospace !important;
+  
+}
+
+#creators {
+  font-family: monospace !important;
+  color: black !important;
+  text-shadow:5px 2px 6px #f2e6f2;
+  background-color: white;
+}
+
+.icons {
+  background-color: white;
+}
+.navbar-text {
+  background-color: white;
 }
