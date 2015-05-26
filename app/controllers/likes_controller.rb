@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
   def index
     @likes = Like.order(:created_at)
-    # render :json => @likes
+  
   end
 
   def create

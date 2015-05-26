@@ -3,7 +3,7 @@
   margin-top: 50px;
   margin-bottom: 10px;
   width: 100px; 
-  background: url("http://hdwallsource.com/img/2014/1/cool-street-art-wallpaper-37602-38465-hd-wallpapers.jpg") no-repeat center center fixed;
+  background-image: image-url("gallery_background.jpg") no-repeat center center fixed;
   background-size: cover;
   opacity: 0.95;
   position: fixed;
@@ -32,7 +32,7 @@ img {
 }
 
 #header {
-  background: url("http://hdwallsource.com/img/2014/3/graffiti-backgrounds-18389-18854-hd-wallpapers.jpg") no-repeat center center fixed;
+  background-image: image-url("gallery_background.jpg") no-repeat center center fixed;
   border-color: transparent;
   font-family: monospace !important;
   color: white;
